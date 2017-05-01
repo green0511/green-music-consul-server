@@ -15,3 +15,9 @@ EXPOSE 8400
 EXPOSE 8500
 
 EXPOSE 53/udp
+
+ARG server
+
+ARG bootstrap
+
+ARG advertise=120.25.244.184
