@@ -5,10 +5,6 @@ stages:
 job_build:
   stage: build
   job_type: image_build
-  build_args: 
-    - bootstrap-expect=3
-  args:
-    - disable-host-node-id=true
   build_dir: /
   cache: true
   dockerfile_path: /Dockerfile
@@ -20,6 +16,4 @@ job_deploy:
     - .*
     tags:
     - .*
-  args:
-    - disable-host-node-id=true
   app_name: green-music-consul-server
