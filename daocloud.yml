@@ -2,9 +2,10 @@ version: 0.1
 
 stages:
   - build
+  - deploy
 
-defaul-build:
-  stage: 构建阶段
+job_build:
+  stage: build
   job_type: image_build
   args:
   - server=true
@@ -13,3 +14,14 @@ defaul-build:
   build_dir: /
   cache: true
   dockerfile_path: /Dockerfile
+
+job_deploy:
+  stage: deploy
+  job_type: DCS_deploy
+  only:
+    branches:
+    - .*
+    tags:
+    - .*
+  app_name: green-music-consul-server
+  cluster_id: sr346813-8475-845a-a8j5-66e6z1d17a50
