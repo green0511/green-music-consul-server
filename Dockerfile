@@ -10,4 +10,4 @@ EXPOSE 8400 8500 8600 8600/udp
 
 ARG advertise=120.25.244.184
 
-CMD ["-server", "-bootstrap-expect", "3", "-disable-host-node-id", "true"]
+CMD ["agent", "-server", "-bootstrap-expect", "3", "-disable-host-node-id", "true"]
