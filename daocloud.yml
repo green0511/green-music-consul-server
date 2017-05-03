@@ -20,5 +20,6 @@ job_deploy:
     - .*
     tags:
     - .*
+  args:
+    - disable-host-node-id=true
   app_name: green-music-consul-server
-  cluster_id: sr346813-8475-845a-a8j5-66e6z1d17a50
