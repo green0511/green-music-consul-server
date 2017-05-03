@@ -20,5 +20,5 @@ ARG advertise=120.25.244.184
 
 ARG disable-host-node-id=true
 
-ENTRYPOINT ["consul", "agent", "-server"]
+# ENTRYPOINT ["consul", "agent", "-server"]
 
