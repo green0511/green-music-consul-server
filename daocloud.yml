@@ -1,9 +1,7 @@
-version: 0.1
-
+version: "0.1"
 stages:
-  - build
-  - deploy
-
+- build
+- deploy
 job_build:
   stage: build
   job_type: image_build
@@ -14,7 +12,6 @@ job_build:
   build_dir: /
   cache: true
   dockerfile_path: /Dockerfile
-
 job_deploy:
   stage: deploy
   job_type: DCS_deploy
