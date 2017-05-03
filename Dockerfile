@@ -1,4 +1,4 @@
-FROM progrium/consul
+FROM consul
 
 MAINTAINER green0511
 
@@ -18,4 +18,7 @@ EXPOSE 53/udp
 
 ARG advertise=120.25.244.184
 
-CMD "-server -bootstrap"
+ARG disable-host-node-id=true
+
+ENTRYPOINT ["agent", "-server"]
+

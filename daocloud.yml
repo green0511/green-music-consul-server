@@ -5,6 +5,8 @@ stages:
 job_build:
   stage: build
   job_type: image_build
+  build_args: 
+    - bootstrap-expect=3
   build_dir: /
   cache: true
   dockerfile_path: /Dockerfile
