@@ -5,10 +5,6 @@ stages:
 job_build:
   stage: build
   job_type: image_build
-  args:
-  - server=true
-  - bootstrap=true
-  - advertise=120.25.244.184
   build_dir: /
   cache: true
   dockerfile_path: /Dockerfile
