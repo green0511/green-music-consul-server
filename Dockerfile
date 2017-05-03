@@ -16,8 +16,6 @@ EXPOSE 8500
 
 EXPOSE 53/udp
 
-ARG server=true
-
-ARG bootstrap=true
-
 ARG advertise=120.25.244.184
+
+CMD "-server -bootstrap"
